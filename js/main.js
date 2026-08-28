@@ -1,5 +1,5 @@
 /* ============================================================
-   ELITE BOXING FITNESS CENTER — main.js
+   IRONCLAD BOXING CLUB — main.js
    GSAP 3 + ScrollTrigger animations & interactivity
    ============================================================ */
 
@@ -189,7 +189,7 @@ const PROGRAMS = [
   {
     name: 'Juniors',
     age: 'Ages 6–10',
-    img: 'https://static.wixstatic.com/media/66b2d7_efd540dd62ef4b30aad86173427ca9df~mv2.jpg/v1/fill/w_800,h_1100,al_c,q_85,enc_avif,quality_auto/IMG_9403.jpg',
+    img: 'images/photos/juniors.jpg',
     desc: 'Fun, structured introduction to boxing fundamentals. Kids develop coordination, confidence, and discipline in a safe, encouraging environment.',
     features: ['Basic stance & footwork', 'Coordination drills', 'Confidence building'],
     ctaText: 'Get Started →',
@@ -198,7 +198,7 @@ const PROGRAMS = [
   {
     name: 'Youth',
     age: 'Ages 11–17',
-    img: 'https://static.wixstatic.com/media/66b2d7_399ad0779e464f0aa4f46b2c2555cfa9~mv2.png/v1/fill/w_800,h_1100,al_c,q_85,enc_avif,quality_auto/IMG_9411_HEIC.png',
+    img: 'images/photos/training-general.jpg',
     desc: 'Intermediate to advanced training for teens ready to take boxing seriously. Technique, fitness, and competitive readiness.',
     features: ['Advanced technique', 'Sparring fundamentals', 'Competition prep'],
     ctaText: 'Get Started →',
@@ -207,7 +207,7 @@ const PROGRAMS = [
   {
     name: 'Adults',
     age: 'Ages 18+',
-    img: 'https://static.wixstatic.com/media/66b2d7_6a6f151a73b54f3e94f5eb81f766da8bf000.jpg/v1/fill/w_800,h_1100,al_c,q_85,enc_avif,quality_auto/66b2d7_6a6f151a73b54f3e94f5eb81f766da8bf000.jpg',
+    img: 'images/photos/hero-adults.jpg',
     desc: 'Full-body boxing for fitness, self-defense, or competition. All skill levels welcome — complete beginners to advanced athletes.',
     features: ['Fitness & conditioning', 'Self-defense skills', 'Competitive boxing'],
     ctaText: 'Get Started →',
@@ -216,7 +216,7 @@ const PROGRAMS = [
   {
     name: 'Masters',
     age: 'Ages 35+',
-    img: 'https://static.wixstatic.com/media/66b2d7_006b22f990324a63bd3ddf07c5567085~mv2.jpeg/v1/fill/w_800,h_1100,al_c,q_85,enc_avif,quality_auto/66b2d7_006b22f990324a63bd3ddf07c5567085~mv2.jpeg',
+    img: 'images/photos/masters.jpg',
     desc: 'Specialized boxing for adults 35+. Modified intensity with full technique — stay sharp, fit, and powerful at any age.',
     features: ['Age-appropriate intensity', 'Full technique training', 'Supportive community'],
     ctaText: 'Get Started →',
@@ -225,7 +225,7 @@ const PROGRAMS = [
   {
     name: 'Personal Training',
     age: 'All Ages',
-    img: 'https://static.wixstatic.com/media/66b2d7_d10884e1603148da9fcea88b5faf6c28f000.jpg/v1/fill/w_800,h_1100,al_c,q_85,enc_avif,quality_auto/66b2d7_d10884e1603148da9fcea88b5faf6c28f000.jpg',
+    img: 'images/photos/personal-training.jpg',
     desc: 'One-on-one sessions tailored to your goals, timeline, and skill level. The fastest path to results with dedicated coach attention.',
     features: ['1-on-1 coach attention', 'Custom training plan', 'Flexible scheduling', '$45 intro session (30 min)'],
     ctaText: 'Book a Session →',
@@ -464,18 +464,18 @@ if (contactForm) {
     btnText.textContent = 'Sending…';
 
     try {
-      await emailjs.send('service_v74x3us', 'template_contact', {
+      await emailjs.send('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', {
         from_name:    name,
         from_email:   email,
         phone:        document.getElementById('phone').value.trim() || 'Not provided',
         program:      document.getElementById('program').value || 'Not specified',
         message:      document.getElementById('message').value.trim() || 'No message provided',
-        to_email:     'elitebfc1065@gmail.com',
+        to_email:     'info@ironcladboxing.com',
       });
     } catch (err) {
       btnText.textContent = 'Send Message';
       submitBtn.disabled = false;
-      alert('Failed to send message. Please call us at (407) 230-8235.');
+      alert('Failed to send message. Please call us at (407) 555-0142.');
       return;
     }
 

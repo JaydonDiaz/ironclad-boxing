@@ -1,5 +1,5 @@
 /* ============================================================
-   ELITE BOXING FITNESS CENTER — style.css
+   IRONCLAD BOXING CLUB — style.css
    ============================================================ */
 
 /* ---- Tokens ---- */
@@ -207,12 +207,12 @@ p:last-child { margin-bottom: 0; }
   height: var(--nav-h);
   gap: 32px;
 }
-.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
-.logo-img { height: 42px; width: auto; transition: filter var(--transition); }
-/* Logo artwork is light-colored line art — invert it in light mode so it stays visible,
-   except while it's still sitting over the dark photo hero scrim (unscrolled, photo pages). */
-html[data-theme="light"] .logo-img { filter: invert(1); }
-html[data-theme="light"] .nav--photo:not(.scrolled) .logo-img { filter: none; }
+.nav-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; color: var(--text); transition: color var(--transition); }
+.brand-icon { flex-shrink: 0; }
+.brand-name { font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: inherit; }
+/* The nav sits over a dark photo hero on some pages (unscrolled) — keep the mark white there
+   regardless of theme, same as the nav links in that state. */
+.nav--photo:not(.scrolled) .nav-logo { color: #fff; }
 .nav-links {
   display: flex;
   gap: 28px;
@@ -1151,8 +1151,8 @@ blockquote {
   padding-bottom: 56px;
   border-bottom: 1px solid var(--border);
 }
-.footer-logo { height: 52px; width: auto; margin-bottom: 16px; }
-html[data-theme="light"] .footer-logo { filter: invert(1); }
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; color: var(--text); }
+.footer-logo .brand-name { font-size: 22px; }
 .footer-brand p { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 280px; margin-bottom: 20px; }
 .footer-socials { display: flex; gap: 10px; }
 .footer-socials a {
